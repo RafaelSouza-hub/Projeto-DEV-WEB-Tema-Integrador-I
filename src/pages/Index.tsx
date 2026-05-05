@@ -118,7 +118,7 @@ const Index = () => {
             <span className="text-gradient">DevWeb</span>
           </a>
           <div className="hidden md:flex items-center gap-1">
-            {sections.slice(0, 7).map((s) => (
+            {sections.slice(0, 8).map((s) => (
               <a key={s.id} href={`#${s.id}`} className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 {s.label}
               </a>
