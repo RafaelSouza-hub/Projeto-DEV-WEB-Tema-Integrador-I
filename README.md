@@ -1,4 +1,4 @@
-# 🧭 Web Dev Compass
+# 🧭 Projeto - DEV-WEB - Tema Integrador 1
 
 > Um guia norteador e estruturado para o aprendizado e desenvolvimento web moderno, consolidando conceitos essenciais de engenharia de software, arquitetura de sistemas e boas práticas de programação.
 
