@@ -2,7 +2,7 @@ import heroImg from "@/assets/hero-dev.jpg";
 import {
   Code2, Server, Shield, Sparkles, Cpu, Database, GitBranch, Award,
   TrendingUp, Building2, Rocket, Globe, ChevronRight, ExternalLink,
-  Briefcase, GraduationCap, Target, Zap,
+  Briefcase, GraduationCap, Target, Zap, Users, Github, Linkedin,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,7 +16,31 @@ const sections = [
   { id: "empresas", label: "Empresas" },
   { id: "desafios", label: "Desafios" },
   { id: "ods", label: "ODS 9" },
+  { id: "quem-somos", label: "Quem somos" },
   { id: "fontes", label: "Fontes" },
+];
+
+const equipe = [
+  {
+    nome: "Abrahão David",
+    github: "https://github.com/abrahaodavid7",
+    linkedin: "https://www.linkedin.com/in/abrahao-david-8a7122408/",
+  },
+  {
+    nome: "Gabriel Rezende",
+    github: "https://github.com/GabrielRezende-Dev",
+    linkedin: "https://www.linkedin.com/in/gabriel-rezende-2384093b4",
+  },
+  {
+    nome: "Leandro Machado",
+    github: "https://github.com/Machado-Leandro11",
+    linkedin: "https://www.linkedin.com/in/leandro-machado-75b0682a5",
+  },
+  {
+    nome: "Rafael Santos",
+    github: "https://github.com/RafaelSouza-hub",
+    linkedin: "https://www.linkedin.com/in/rafael-de-s-santos-10a92717a/",
+  },
 ];
 
 const responsabilidades = [
