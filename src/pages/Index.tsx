@@ -2,7 +2,7 @@ import heroImg from "@/assets/hero-dev.jpg";
 import {
   Code2, Server, Shield, Sparkles, Cpu, Database, GitBranch, Award,
   TrendingUp, Building2, Rocket, Globe, ChevronRight, ExternalLink,
-  Briefcase, GraduationCap, Target, Zap,
+  Briefcase, GraduationCap, Target, Zap, Users, Github, Linkedin,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,7 +16,31 @@ const sections = [
   { id: "empresas", label: "Empresas" },
   { id: "desafios", label: "Desafios" },
   { id: "ods", label: "ODS 9" },
+  { id: "quem-somos", label: "Quem somos" },
   { id: "fontes", label: "Fontes" },
+];
+
+const equipe = [
+  {
+    nome: "Abrahão David",
+    github: "https://github.com/abrahaodavid7",
+    linkedin: "https://www.linkedin.com/in/abrahao-david-8a7122408/",
+  },
+  {
+    nome: "Gabriel Rezende",
+    github: "https://github.com/GabrielRezende-Dev",
+    linkedin: "https://www.linkedin.com/in/gabriel-rezende-2384093b4",
+  },
+  {
+    nome: "Leandro Machado",
+    github: "https://github.com/Machado-Leandro11",
+    linkedin: "https://www.linkedin.com/in/leandro-machado-75b0682a5",
+  },
+  {
+    nome: "Rafael Santos",
+    github: "https://github.com/RafaelSouza-hub",
+    linkedin: "https://www.linkedin.com/in/rafael-de-s-santos-10a92717a/",
+  },
 ];
 
 const responsabilidades = [
@@ -94,7 +118,7 @@ const Index = () => {
             <span className="text-gradient">DevWeb</span>
           </a>
           <div className="hidden md:flex items-center gap-1">
-            {sections.slice(0, 6).map((s) => (
+            {sections.slice(0, 7).map((s) => (
               <a key={s.id} href={`#${s.id}`} className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 {s.label}
               </a>
@@ -345,9 +369,48 @@ const Index = () => {
         </div>
       </section>
 
+      {/* QUEM SOMOS */}
+      <section id="quem-somos" className="py-24 container">
+        <SectionTitle
+          eyebrow="08 · Equipe"
+          title="Quem somos"
+          desc="Estudantes responsáveis por este projeto. Conecte-se conosco no GitHub e LinkedIn."
+        />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {equipe.map((p) => (
+            <Card key={p.nome} className="card-glass p-6 border-0 flex flex-col items-center text-center">
+              <div className="w-16 h-16 rounded-full bg-hero-gradient flex items-center justify-center mb-4 glow">
+                <Users className="w-7 h-7 text-primary-foreground" />
+              </div>
+              <h3 className="font-display font-semibold text-lg mb-4">{p.nome}</h3>
+              <div className="flex gap-2 mt-auto">
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`GitHub de ${p.nome}`}
+                  className="w-10 h-10 rounded-lg bg-muted border border-border flex items-center justify-center hover:border-primary/50 hover:text-primary transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+                <a
+                  href={p.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`LinkedIn de ${p.nome}`}
+                  className="w-10 h-10 rounded-lg bg-muted border border-border flex items-center justify-center hover:border-primary/50 hover:text-primary transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+
       {/* FONTES */}
       <section id="fontes" className="py-24 container">
-        <SectionTitle eyebrow="08 · Referências" title="Fontes Consultadas" />
+        <SectionTitle eyebrow="09 · Referências" title="Fontes Consultadas" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {fontes.map((f) => (
             <a
